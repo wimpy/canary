@@ -5,6 +5,7 @@ set -v
 DEPLOYMENT_ENVIRONMENT=${1:-production}
 
 env
+echo "TRAVIS_TEST_RESULT: ${TRAVIS_TEST_RESULT}"
 
 # Only execute deployment if $TRAVIS is null (we are not on CI) or we are on CI merging to master and the build has ended successfully
 if [[ -z "${TRAVIS}" ]] || [[ "${TRAVIS_PULL_REQUEST}" == "false" && "${TRAVIS_TEST_RESULT}" == 0 && "${TRAVIS_BRANCH}" == 'master' ]]; then
