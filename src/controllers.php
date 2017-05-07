@@ -34,11 +34,11 @@ $app->get('/health', function () use ($app) {
             'Plaintext' => $string,
         ]);
         $decrypted_string = $kms->decrypt([
-            'CiphertextBlob' => base64_decode($encrypted_string->get('CiphertextBlob')),
+            'CiphertextBlob' => $encrypted_string->get('CiphertextBlob'),
         ]);
 
         if ($decrypted_string->get('Plaintext') !== $string) {
-            throw new RuntimeException();
+            throw new RuntimeException("Initial string and its encrypted/decrypted version don't match");
         }
     }
 
