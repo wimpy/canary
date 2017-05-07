@@ -34,7 +34,7 @@ $app->get('/health', function () use ($app) {
             'Plaintext' => $string,
         ]);
         $decrypted_string = $kms->decrypt([
-            'CiphertextBlob' => base64_decode($encrypted_string),
+            'CiphertextBlob' => base64_decode($encrypted_string->get('CiphertextBlob')),
         ]);
 
         if ($decrypted_string->get('Plaintext') !== $string) {
