@@ -10,7 +10,7 @@ cache:
 
 install: composer install
 
-script: deploy.sh
+script: ./deploy.sh
 
 env:
   global:
