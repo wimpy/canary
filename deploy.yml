@@ -3,7 +3,7 @@
 - hosts: localhost
   connection: local
   vars:
-    wimpy_application_name: "canary"
+    wimpy_application_name: "canary2"
     wimpy_application_port: 80
     wimpy_application_deploy_strategy: "BlueGreen"
     wimpy_aws_elb_healthcheck_ping_path: "/healthz"
