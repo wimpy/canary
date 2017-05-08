@@ -5,7 +5,7 @@ set -v
 DEPLOYMENT_ENVIRONMENT=${1:-production}
 
 # Only execute deployment if $TRAVIS is null (we are not on CI) or we are on CI merging to master and the build has ended successfully
-if [[ -z "${TRAVIS}" ]] || [[ "${TRAVIS_PULL_REQUEST}" == "false" && "${TRAVIS_BRANCH}" == 'master' ]]; then
+if [[ -z "${TRAVIS}" ]] || [[ "${TRAVIS_PULL_REQUEST}" == "false" && "${TRAVIS_BRANCH}" == 'blue_green' ]]; then
   docker run --rm -it \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v "$PWD:/app" \

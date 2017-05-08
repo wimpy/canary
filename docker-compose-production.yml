@@ -1,0 +1,9 @@
+version: '2'
+services:
+  canary:
+    image: 249370547432.dkr.ecr.eu-west-1.amazonaws.com/canary
+    ports:
+      - "80:80"
+    environment:
+      - S3_BUCKET
+      - KMS_MASTER_KEY

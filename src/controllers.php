@@ -2,7 +2,7 @@
 
 use Aws\S3\Exception\S3Exception;
 
-$app->get('/health', function () use ($app) {
+$app->get('/healthz', function () use ($app) {
 
     function canWriteOnOwnS3Bucket($app)
     {
