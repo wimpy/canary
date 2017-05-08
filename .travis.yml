@@ -7,6 +7,10 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-engine
+
 install: composer install
 
 script: ./deploy.sh
