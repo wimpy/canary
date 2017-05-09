@@ -1,7 +1,7 @@
 version: '2'
 services:
   canary:
-    image: 249370547432.dkr.ecr.eu-west-1.amazonaws.com/canary
+    image: "${DOCKER_REGISTRY}/canary2"
     ports:
       - "80:80"
     environment:
