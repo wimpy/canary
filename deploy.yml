@@ -7,7 +7,6 @@
     wimpy_application_port: 80
     wimpy_application_deploy_strategy: "BlueGreen"
     wimpy_aws_elb_healthcheck_ping_path: "/healthz"
-    wimpy_aws_elb_scheme: internal
     wimpy_aws_keypair: "ec2_personal"
     wimpy_aws_hosted_zone_name: "armesto.net"
   roles:
