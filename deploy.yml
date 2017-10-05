@@ -5,7 +5,7 @@
   vars:
     wimpy_application_name: "canary"
     wimpy_application_port: 80
-    wimpy_aws_keypair: "ec2_personal"
+    wimpy_aws_keypair: "personal"
     wimpy_aws_hosted_zone_name: "armesto.net"
   roles:
     - role: wimpy.environment
